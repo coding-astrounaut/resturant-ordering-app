@@ -50,6 +50,7 @@ button {
     font-size: 16px;
     font-weight: 700;
     line-height: 20px;
+    cursor: pointer;
 }
 
 #modal{
@@ -219,10 +220,16 @@ hr {
 .order-item-price {  
     font-weight: 400;
 }
-/*<div class='price-line'>
-    <div class='price-item'>
-        <h3 class='price-name'>${item.name}</h3>
-        <button class='price-remove-btn'>remove</button>
-    </div>
-    <h4 class='order-item-price'>${item.price}
-/*</div>`})
+
+.success-text {
+    color: #065F46;
+    font-size: 32px;
+    font-weight: 200;
+    margin: 0;
+    line-height: 16px;
+    background-color: #ECFDF5;
+    text-align: center;
+    width: 100%;
+    padding: 50px 0px;
+}
+

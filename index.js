@@ -3,6 +3,19 @@ import menuArray from './data.js'
 //number of items in the order
 let orders = []
 let totalPrice = 0
+const modal = document.getElementById('modal')
+const order = document.getElementById('payment')
+
+let name = ''
+let cardDetails = ''
+let ccv = ''
+
+document.addEventListener('submit', function(e) {
+    if (e.target.id === 'payment-form') {
+        e.preventDefault(); // Successfully stops the reload
+        handlePayment()
+    }
+});
 
 document.addEventListener('click', handleClick)
 
@@ -11,6 +24,8 @@ function handleClick(e) {
         handleAddToOrder(e.target.dataset.id)
     }else if (e.target.dataset.remove){
         handleRemoveFromOrder(e.target.dataset.item)
+    }else if (e.target.id == "order-btn"){
+        handleCompleteOrder()
     }
 }
 
@@ -33,13 +48,24 @@ function generateMenuElements(menu) {
     })
 }
 
+function handlePayment(e) {
+    name = document.getElementById('name-input').value
+    cardDetails = document.getElementById('card-input').value
+    ccv = document.getElementById('ccv-input').value
+    modal.style.display = 'none'
+    order.innerHTML = `<h3 class='success-text'>Thanks, ${name}! Your order is on its way!</h3>`
+}
+
+function handleCompleteOrder(){
+    modal.style.display = 'block'
+}
+
 function renderMenu() {
     const menu = document.getElementById('menu')
     menu.innerHTML = generateMenuElements(menuArray).join('')
 }
 
 function renderOrder() {
-    const order = document.getElementById('payment')
     if(totalPrice){
         // Render order details
         order.style.display = 'block'

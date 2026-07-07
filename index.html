@@ -35,11 +35,11 @@
             </main>
             <div id="modal">
                 <h2>Enter card details</h2>
-                <form>
-                    <input type="text" name="card-name" placeholder="Enter your name" aria-label="Enter your name" required>
-                    <input type="text" name="card-number" placeholder="Enter your card number" aria-label="Enter your card number" required>
-                    <input type="text" name="card-cvv" placeholder="Enter your card CVV" aria-label="Enter your card CVV" required>
-                    <button type="submit">Pay</button>
+                <form id="payment-form">
+                    <input type="text" name="card-name" placeholder="Enter your name" aria-label="Enter your name" id='name-input' required>
+                    <input type="text" name="card-number" placeholder="Enter your card number" aria-label="Enter your card number" id='card-input' required>
+                    <input type="text" name="card-cvv" placeholder="Enter your card CVV" aria-label="Enter your card CVV" id='ccv-input' required>
+                    <button type="submit" id="payment-btn" >Pay</button>
                 </form>
             </div>
         </div>  
