@@ -97,7 +97,7 @@ input {
 }
 
 hr {
-    border: 2px solid #393333;
+    border: 1px solid #393333;
 }
 
 .add-to-order-btn {
@@ -183,3 +183,46 @@ hr {
     color: black;
     text-align: center;
 }
+
+.price-line {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 16px;
+    margin: auto;
+}
+
+.price-item {
+    display: flex;
+    gap: 8px
+}
+
+.price-remove-btn {
+    display: block;
+    background: none;
+    color: #757575;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 400;
+    padding: 4px;
+    margin: 4px;
+    box-shadow: none;
+}
+
+.price-name {
+    font-weight: 400;
+}
+
+.order-item-price {  
+    font-weight: 400;
+}
+/*<div class='price-line'>
+    <div class='price-item'>
+        <h3 class='price-name'>${item.name}</h3>
+        <button class='price-remove-btn'>remove</button>
+    </div>
+    <h4 class='order-item-price'>${item.price}
+/*</div>`})
